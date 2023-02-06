@@ -33,7 +33,7 @@ let getMovie = ()=>{
         console.log(data.Plot);
         console.log(data.Actors);
 
-        result.innerHTML=`
+        result.innerHTML= `
         <div class = "info">
         <img src=${data.Poster} class = "poster">
             <div>

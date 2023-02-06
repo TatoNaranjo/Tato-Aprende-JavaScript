@@ -134,3 +134,21 @@ p{
     }
     
 }
+a{
+    text-decoration: none;
+    color: #a0a0a0;
+}
+header{
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header p{
+    font-size: 16px;
+}
+header a{
+   font-weight: bold; 
+   font-size: 18px;
+}
