@@ -22,16 +22,7 @@ let getMovie = ()=>{
     .then((data) =>{
         //Si La Pelicula Existe en la Base de Datos
         if(data.Response == 'True'){
-        console.log(data);
-        console.log(data.Poster);
-        console.log(data.Title);
-        console.log(data.imdbRating);
-        console.log(data.Rated);
-        console.log(data.Year);
-        console.log(data.Runtime);
-        console.log(data.Genre);
-        console.log(data.Plot);
-        console.log(data.Actors);
+     
 
         result.innerHTML= `
         <div class = "info">
