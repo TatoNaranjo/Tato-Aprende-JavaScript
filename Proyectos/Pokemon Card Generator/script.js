@@ -102,6 +102,7 @@ btn.addEventListener("click",getPokeData);
 window.addEventListener("load",getPokeData);
 btn.addEventListener('keypress',function(e){
     if (e.key === 'Enter') {
+        e.preventDefault();
         getPokeData();
       }
 });
