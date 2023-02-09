@@ -1,20 +1,21 @@
 
 const typeColor ={
     bug: "#26de81",
-    dragon:"#ffeaa7",
+    dragon: "#ffeaa7",
     electric: "#fed330",
     fairy: "#FF0069",
-    fighting:"#30336b",
-    flying:"#81ecec",
-    grass:"#00b894",
-    ground:"#EFB549",
-    ghost:"#a55eea",
-    ice:"#74b9ff",
-    normal:"#95afc0",
-    poison:"#6c5ce7",
-    psychic:"#a29bfe",
-    rock:"#2d3436",
-    water:"#0190FF"
+    fighting: "#30336b",
+    fire: "#f0932b",
+    flying: "#81ecec",
+    grass: "#00b894",
+    ground: "#EFB549",
+    ghost: "#a55eea",
+    ice: "#74b9ff",
+    normal: "#95afc0",
+    poison: "#6c5ce7",
+    psychic: "#a29bfe",
+    rock: "#2d3436",
+    water: "#0190FF",
 }
 const url = "https://pokeapi.co/api/v2/pokemon/";
 const card = document.getElementById("card");
@@ -68,17 +69,17 @@ let generateCard = (data)=>{
 <div class="stats">
     <div>
         <h3>${statAttack}</h3>
-        <p>Attack</p>
+        <p>Ataque</p>
     </div>
 
     <div>
         <h3>${statDefense}</h3>
-        <p>Defense</p>
+        <p>Defensa</p>
     </div>
 
     <div>
         <h3>${statSpeed}</h3>
-        <p>Speed</p>
+        <p>Velocidad</p>
     </div>
     `;
     appendTypes(data.types);
@@ -97,12 +98,13 @@ card.style.background = `radial-gradient(circle at 50% 0%, ${color} 36%, #ffffff
 card.querySelectorAll(".types span").forEach(typeColor => {typeColor.style.backgroundColor = color;
 })
 }
-
-btn.addEventListener("click",getPokeData);
 window.addEventListener("load",getPokeData);
+btn.addEventListener("click",getPokeData);
+
 btn.addEventListener('keypress',function(e){
     if (e.key === 'Enter') {
         e.preventDefault();
         getPokeData();
       }
 });
+

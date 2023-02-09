@@ -8,14 +8,49 @@
 body{
     background-color: #eff3ff;
 }
-.container{
-    width: 350px;
-   
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top:50%;
-    left: 50%;
+a{
+    text-decoration: none;
+    color:#101010;
 }
+header {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+}
+header:hover{
+    animation-name: presentation;
+    animation-duration: 2s;
+}
+@keyframes presentation {
+    100%{
+        color:orange;
+    }
+}
+@media (max-width: 768px){
+    header{
+        font-size: 12px;
+    }
+}
+.container{
+    width: 95%;
+    padding-left: 20px;
+    
+}
+@media (min-width: 768px){
+    .container{
+        width: 350px;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top:50%;
+        left: 50%;
+        padding-left: 0;
+    }
+}
+
 #card{
     position: relative;
     width: 100%;
@@ -80,4 +115,35 @@ body{
     margin: 30px auto;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top:80%;
+}
+#btn:hover{
+    transition: all .5s ease;
+    background-color: #CB904D;
+    font-weight: bold;  
+    color:#101010;
+}
+@media (min-width: 768px){
+   #btn{
+    top:75%;
+    left: 50%;
+   } 
+}
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+@media (min-width: 768px){
+    h1{
+        
+        font-size: 2rem;
+    }
 }
