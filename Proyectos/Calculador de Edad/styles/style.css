@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+:root{
+
+    --color-fondo:hsl(0, 0%, 94%);
+    --color-label:hsl(0, 1%, 44%);
+    --color-resultados:hsl(259, 100%, 65%);
+    --color-error:hsl(0, 100%, 67%);
+}
+html,body{
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+body{
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-fondo);
+}
+.container{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+   margin-top: 4rem;
+   margin-bottom: 2rem;
+
+    
+}
+
+@media (min-width:1440px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    height: 90%;
+    }
+}
+p{
+    margin:0;
+}
+.card{
+ 
+    margin:0 1rem  1rem;
+    padding:2rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(1,1fr);
+    border-radius: 0 0 5rem 0;
+    background-color: white;
+    
+   
+}
+@media (min-width:1440px) {
+    .card{
+        width: 500px;
+        padding: 4rem;
+        border-radius: 0 0 10rem 0;
+    }
+}
+
+.input-date{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:1rem;
+    font-size: 1rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid gray;
+}
+.input-date input{
+width: 60px;
+height: 30px;
+border-style: initial;
+border-radius: 4px;
+overflow-y:hidden;
+ border:2px solid whitesmoke;
+
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.date-label{
+    font-size: 12px;
+    color:var(--color-label);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+    font-weight: bold;
+    
+    }
+    input::placeholder{
+        font-weight: bold;
+        padding-left: 4px;
+    }
+
+ 
+@media (min-width:1440px) {
+    .input-date{
+        display: grid;
+        width: 500px;
+        grid-template-columns: 1fr 1fr 1fr 2.5fr;
+        gap:1rem;
+        padding-bottom: 2rem;
+       
+      
+    }
+
+    .input-date input{       
+        width:8rem;
+        height: 3rem;
+        padding:0;
+        padding-left:4px;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+}
+
+.upper-part{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+input:focus{
+    border:1px solid var(--color-resultados);
+    outline:none;
+    font-weight: bold;
+    transition: 2s;
+    box-shadow: var(--color-resultados) 2px 5px 0px 0px;
+}
+
+.send-button{
+       
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border-style: none;
+    border-radius: 50%;
+    background-color: var(--color-resultados);
+
+}
+
+.send-button:hover{
+ background-color: black;
+ cursor: pointer;
+}
+
+.error{
+    width:60px;
+    color:var(--color-error);
+    font-size: 8px;
+}
+@media (min-width:1440px) {
+    .error{
+        width:8rem;
+        font-size: 8px;
+    }
+}
+
+.date-result{
+    display: grid;
+    flex-direction: row;
+    font-size: 20px;
+    font-style: italic;
+}
+.result{
+    margin:0;
+}
+.number{
+    color:var(--color-resultados);
+}
+
+.send-button{
+    position:relative;
+    left:37%;
+    bottom:50%;
+}
+img{
+    width: 50%;
+    height: 50%;
+}
+
+@media(min-width:1440px){
+    .upper-part{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .send-button{
+        position: relative;
+        top:75px;
+        left: -45px;
+    }
+
+   .date-result{
+    font-size: 32px;
+    padding-top: 1.5rem;
+    font-style: italic;
+   }
+   .send-button{
+    width: 75px;
+    height: 75px;
+   }
+ 
+  
+}
+
+
+/*Credits*/
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+    font-family: 'JetBrains Mono', monospace;}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    
+    text-decoration: none;
+}
+.attribution a:last-child:hover { 
+    transition: 1s;
+    color:orange;
+}
+@media (max-width:1440px) {
+    .attribution{
+        font-size: 18px;
+        padding-bottom: 1rem;
+    }
+}

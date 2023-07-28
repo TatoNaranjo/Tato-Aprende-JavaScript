@@ -22,8 +22,6 @@ let getMovie = ()=>{
     .then((data) =>{
         //Si La Pelicula Existe en la Base de Datos
         if(data.Response == 'True'){
-     
-
         result.innerHTML= `
         <div class = "info">
         <img src=${data.Poster} class = "poster">

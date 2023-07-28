@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<main class="container">
+  <div class="card">
+    <form class="upper-part" id="upperPart">
+
+  
+    <div class="input-date" id="input-date">
+      <div class = "date" id ="date">
+        <p class = "date-label">Day</p>
+        <input type="number" name="day" id="day" placeholder="DD">
+        <div class="day-error" id="day-error"></div>
+      </div>
+   
+     
+    <div class = "date" id ="date">
+      <p class = "date-label">Month</p>
+      <input type="number" name="month" id="month" placeholder="MM">
+      <div class="month-error" id="month-error"></div>
+    </div>
+     
+     
+    <div class = "date" id ="date">
+      <p class = "date-label">Year</p>
+      <input type="number" name="year" id="year" placeholder="YYYY">
+      <div class="year-error" id="year-error"></div>
+    </div>
+
+    </div>
+
+    <div >
+      <button class="send-button" id="send-button" onclick="validation()"><img src="./assets/images/icon-arrow.svg" alt="arrow icon"></button>
+    </div>
+
+  </form>
+    
+
+
+  <div class="date-result">
+    <div class="years-result">
+     <h1 class = "result resultY" id="resultY"> <span class ="number numberY" id="numberY">--</span> years</h1>
+    </div>
+   
+    <div class="months-result">
+      <h1 class="result resultM" id="resultM"><span class ="number numberM" id="numberM">--</span> months</h1>
+    </div>
+   
+    <div class="days-result">
+      <h1 class="result resultD"id="resultD"><span class ="number numberD"id="numberD">--</span> days</h1>
+    </div>
+   
+  </div>
+   
+  </div>
+</main>
+ 
+  
+   
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="https://tatonaranjo.netlify.app/">TatoNaranjo</a>.
+</div>
+  <script src="./script/app.js"></script>
+</body>
+</html>
